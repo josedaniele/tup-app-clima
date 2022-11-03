@@ -28,16 +28,17 @@ function ciudadesSelect(){
 ciudadesSelect()
 
 function consulta(){
-    ciudadSeleccionada= document.getElementById("ciudades").value
+    let ciudadSeleccionada= document.getElementById("ciudades").value
     let url= `https://api.openweathermap.org/data/2.5/weather?q=${ciudadSeleccionada}&appid=c223f149ad4b4620f47b1f5f8a1ab787&units=metric&lang=es`
+    const $cargando = document.getElementById("carga");
+    $cargando.style.display = 'block'
     fetch(url)
         .then((response) => response.json())
         .then(data => {
-            console.log(data)
+        console.log(data)
          let resultado= document.getElementById("section-weather-result")
-
          resultado.innerHTML = `
-         <div class="card">
+         <div class="carta">
              <h3>${data.name}</h3>
              <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
              <p>Temperatura: ${data.main.temp} </p>
@@ -49,5 +50,6 @@ function consulta(){
         `
         
     })
-        .catch(err=> console.log(err))     
+        .catch(err=> console.log(err))
+        .finally(()=>{$cargando.style.display = 'none';}     )
 }
