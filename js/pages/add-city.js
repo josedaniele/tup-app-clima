@@ -14,6 +14,8 @@ function agregarCiudad() {
       return alert("INGRESE UN VALOR")
     }
     let url= `https://api.openweathermap.org/data/2.5/weather?q=${nuevaCiudad}&appid=c223f149ad4b4620f47b1f5f8a1ab787&units=metric&lang=es`
+    let $cargando = document.getElementById("carga");
+    $cargando.style.display = 'block'
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
@@ -41,7 +43,9 @@ function agregarCiudad() {
         })
 
 
-        .finally(()=>{console.log("terminado")}   )
+        .finally(()=>{console.log("terminado");
+          $cargando.style.display = 'none';
+          }   )
 }
       
 function comprobacion(nuevaCiudad, ciudades) {

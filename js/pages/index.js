@@ -30,7 +30,7 @@ ciudadesSelect()
 function consulta(){
     let ciudadSeleccionada= document.getElementById("ciudades").value
     let url= `https://api.openweathermap.org/data/2.5/weather?q=${ciudadSeleccionada}&appid=c223f149ad4b4620f47b1f5f8a1ab787&units=metric&lang=es`
-    const $cargando = document.getElementById("carga");
+    let $cargando = document.getElementById("carga");
     $cargando.style.display = 'block'
     fetch(url)
         .then((response) => response.json())

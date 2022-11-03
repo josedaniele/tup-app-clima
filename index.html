@@ -33,12 +33,14 @@ botón de consultar -->
           <select name="" id="ciudades" >
             <option value="" disabled selected>Seleccionar Ciudad</option>
           </select>
-          <button onclick="consulta(); return false" >Consultar</button>
+          <button class="boton"  onclick="consulta()" type="button" >Consultar</button>
         </form>
       </section>
       <section id="section-weather-result">
-        <div id="carga" class="spinner-border" role="status">
-          <span class="sr-only visually-hidden">Loading...</span>
+        <div  class="d-flex justify-content-center ">
+          <div id="carga" class="spinner-border text-dark" role="status">
+            <span class="sr-only visually-hidden">Loading...</span>
+          </div>
         </div>
         <!-- Sección donde se debe mostrar el clima de la ciudad -->
       </section>
