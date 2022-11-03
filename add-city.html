@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUP LC2 - TP Integrador</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pages/add-city.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        <span>Clima App</span>
+      </h1>
+      <nav>
+        <ul>
+          <li class=><a href="./index.html">Clima</a></li>
+          <li class="current-page"><a href="#">Agregar Ciudad</a></li>
+          <li><a href="/help.html">Ayuda</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Contenido principal de la página -->
+    <main>
+      <h2>Agregar Ciudad</h2>
+      <section class="agregarCiudad" >
+        <form action="#">
+            <label for="">Ingrese la ciudad a agregar:</label>
+            <input type="text" id="ciudadIngresada">
+            <div>
+              <button onclick="agregarCiudad(); return false;">Agregar</button>
+            </div>
+        </form>
+      </section>
+      <section id="section-weather-result">
+        
+        <p id="alerta1" class="alertas">Ciudad agregada con éxito</p>
+        <p id="alerta2" class="alertas">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>
+        <p id="alerta3" class="alertas"> La ciudad ingresada ya se encuentra almacenada</p>
+       
+      </section>
+    </main>
+    <footer>
+      <p>Desarrollado con ♥ - LC2</p>
+    </footer>
+    <script src="./js/pages/add-city.js"></script>
+  </body>
+</html>

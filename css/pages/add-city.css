@@ -1,0 +1,38 @@
+input {
+  padding: 10px;
+  margin: 10px;
+  border: solid 1px;
+  border-radius: 6px;
+  font-size: medium;
+}
+/*Clases*/
+.agregarCiudad form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.alertas {
+  padding: 15px 10px;
+  border-radius: 20px;
+}
+/*IDS*/
+#section-weather-result {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  margin: 50px 20% 0px;
+}
+#alerta1 {
+  display: none;
+  background-color: #28a745;
+}
+#alerta2 {
+  display: none;
+  background-color: #dc3545;
+}
+#alerta3 {
+  display: none;
+  background-color: #ffc107;
+}
