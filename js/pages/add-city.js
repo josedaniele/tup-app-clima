@@ -15,7 +15,7 @@ function agregarCiudad() {
     }
     let url= `https://api.openweathermap.org/data/2.5/weather?q=${nuevaCiudad}&appid=c223f149ad4b4620f47b1f5f8a1ab787&units=metric&lang=es`
     let $cargando = document.getElementById("carga");
-    $cargando.style.display = 'block'
+    $cargando.style.display = 'block';
     fetch(url)
         .then((response) => response.json())
         .then((data) => {

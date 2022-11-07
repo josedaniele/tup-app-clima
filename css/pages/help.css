@@ -2,7 +2,7 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0px 25%;
+    margin: 100px 25%;
 }
 textarea{
     padding: 10px;
@@ -15,15 +15,18 @@ button{
 }
 /*Clases*/
 .botones{
-
+    margin-top: 5px;
     display: flex;
     justify-content: center;
 }
-.alerta{
-    text-align: center;
-    color: white;
-    background-color: #dc3545;
-    margin: 10px 20%;
+
+.alertas {
     padding: 15px 10px;
-    border-radius: 20px;;
+    border-radius: 20px;
+    margin-top: 10px;
+    color: white;
+  }
+#alerta1 {
+    display: none;
+    background-color: #28a745;
 }

@@ -13,6 +13,7 @@
   <body>
     <header>
       <h1>
+        <img class="logo" src="https://images.squarespace-cdn.com/content/v1/5572b7b4e4b0a20071d407d4/1487090874274-FH2ZNWOTRU90UAF5TA2B/Weather+Targeting" alt="">
         <span>Clima App</span>
       </h1>
       <nav>
@@ -25,7 +26,7 @@
     </header>
     <!-- Contenido principal de la página -->
     <main>
-      <h2>El Clima Ahora</h2>
+      <h2  class="subt">El Clima Ahora</h2>
       <section id="form-city-list">
         <!-- Sección donde se debe colocar el formulario, con el select y el
 botón de consultar -->
@@ -33,15 +34,15 @@ botón de consultar -->
           <select name="" id="ciudades" >
             <option value="" disabled selected>Seleccionar Ciudad</option>
           </select>
-          <button class="boton"  onclick="consulta()" type="button" >Consultar</button>
+          <button class="boton"onclick="consulta()" type="button" >Consultar</button>
         </form>
       </section>
-      <section id="section-weather-result">
-        <div  class="d-flex justify-content-center ">
-          <div id="carga" class="spinner-border text-dark" role="status">
-            <span class="sr-only visually-hidden">Loading...</span>
-          </div>
+      <div class="d-flex justify-content-center">
+        <div id="carga"  class="spinner-border text-dark" role="status">
+          <span class="sr-only visually-hidden">Loading...</span>
         </div>
+      </div>
+      <section id="section-weather-result">
         <!-- Sección donde se debe mostrar el clima de la ciudad -->
       </section>
     </main>
